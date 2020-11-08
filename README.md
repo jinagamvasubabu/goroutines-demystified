@@ -2,7 +2,7 @@
 A simple and easy explanation of Goroutines (Concurrency&amp;Parallelism) with easy examples
 
 ## 1. Concurrency is not parallelism
-##### **Parallelism**:
+##### Parallelism:
 * Doing Multiple things at once
 * Number of tasks you are doing in parallel is directly proportional to the number of cores in your system
 * Order of execution is not predictable and we should not rely on them to execute in any specific order
