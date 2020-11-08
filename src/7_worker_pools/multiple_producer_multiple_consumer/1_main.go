@@ -24,7 +24,6 @@ func consumer(i int, p chan string, wg *sync.WaitGroup) {
 func main() {
 	var wp sync.WaitGroup
 	var wc sync.WaitGroup
-	//done := make(chan bool)
 	producerQ := make(chan string)
 	for i := 0; i < 3; i++ {
 		wp.Add(1)
