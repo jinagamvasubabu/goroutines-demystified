@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"runtime"
-)
+import "fmt"
 
 /** unbuffered channels (channels with no capacity) are blocking by nature
 * Channel with no capacity
@@ -18,10 +15,10 @@ func main() {
 	go PackBag(ch)
 	go LogOffWork(ch)
 
-	for i := 0; i < 4; i++ {
+	for i := 0; i < 3; i++ {
 		fmt.Println(<-ch)
 	}
-	fmt.Printf("Main goroutine ends %d", runtime.NumGoroutine()) //No receivers available ? then it creates orphan goroutines
+
 }
 
 func ComposeEmail(ch chan string) {
