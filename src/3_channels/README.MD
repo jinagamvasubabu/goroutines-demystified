@@ -20,3 +20,8 @@
 * Sending data to closed channel will PANIC
 * Sending to a channel with out receiver will create a leak (orphan goroutine where memory will never be released)
 * Receiving from a channel where there is no data in the channel creates deadlock
+
+### Buffered Channel:
+* Channel with a capacity
+* Sends to a buffered channel are blocked only when the buffer is full
+* Receives from a buffered channel are blocked only when the buffer is empty
