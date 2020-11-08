@@ -9,6 +9,10 @@ Where as a thread has to initialized with fixed stack size
 * Goroutines are concurrent in nature and uses channels to communicate in between to synchronize instead of creating deadlocks or race conditions
 
 * Any Concurrent programming requires an independently executable function and making that function to a goroutine is very simple
+
+* Goroutine uses Channels to communicate with other goroutines 
+
+* Goroutines uses CSP (Communicating Sequential Processes) to talk to other goroutines by passing data between channels instead of sharing data
 ```go
 go func() {
 }() //Anonymous goroutine
@@ -33,8 +37,9 @@ func helloWorld(name string) {
 ```
 
 why do you need `time.Sleep(time.Second)` ?
-Because Main is also a goroutine here and its concurrently and doesn't wait for other goroutines to finish because it 
-doesn't know about other goroutines exist
+
+Because Main is also a goroutine here and its running concurrently and doesn't wait for other goroutines to finish because it 
+doesn't know about other goroutines even exists
 
 ### We Need Blocking!!!! Channels is the way :)
 
